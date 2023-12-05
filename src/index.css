@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+body {
+  background: rgb(101,228,204);
+  /* background: linear-gradient(180deg, rgba(101,228,204,1) 0%, rgba(75,129,229,1) 100%); */
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+
+  color: black;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  
+}
+* {
+  
+  box-sizing: border-box;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

@@ -1,0 +1,6 @@
+.AddTodoStyle {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5px;
+    margin-bottom: 10px;
+}

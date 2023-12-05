@@ -1,0 +1,125 @@
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+
+.loader {
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  display: block;
+  position: relative;
+  border: 2px solid #4ef7a2;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid #70d1b4;
+  width: 38px;
+  height: 38px;
+  animation: rotationBack 1.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 28px;
+  height: 28px;
+  border-color: #d49bee;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.boardWrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  height: auto;
+  background-color: white;
+  border-radius: 3px;
+  padding: 35px 20px;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
+-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
+box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
+width: 100%;
+max-width: 450px;
+
+
+}
+
+button {
+  border: none;
+  color: rgb(31, 30, 30);
+  font-size: 12px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  font-size: 12px;
+  padding: 5px 10px;
+  cursor: pointer;
+
+}
+
+button:hover {
+  background-color: rgb(100, 223, 206);
+}
+
+input {
+  border: 1px gray solid;
+  border-radius: 2px;
+    font-size: 12px;
+    padding: 5px 10px;
+
+}
+
+.SortAndSearch {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-top: 1px grey solid;
+
+}
+
+.todos {
+  padding-left: 0;
+}
+
+.error {
+  font-size: 35px;
+  text-align: center;
+  color: red;
+}
